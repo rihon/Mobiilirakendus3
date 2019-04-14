@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AddNotePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NoteServiceProvider } from '../../providers/note-service/note-service';
+import {Note} from '../../models/note.model';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AddNotePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private noteService : NoteServiceProvider) {
+  }
+  saveNote(note: Note){
+    this.noteService.saveNote(note);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddNotePage');
-  }
 
 }

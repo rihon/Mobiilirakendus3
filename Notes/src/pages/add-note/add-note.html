@@ -6,5 +6,11 @@
 </ion-header>
 
 <ion-content padding>
-<button ion-button>Add Note</button>
+<form (ngSubmit)="saveNote(f.value)"#f="ngForm">
+  <ion-item>
+    <ion-label></ion-label>
+      <ion-input name="title" ngModel></ion-input>
+  </ion-item>
+  <button ion-button type="submit">Save Note</button>
+</form>
 </ion-content>

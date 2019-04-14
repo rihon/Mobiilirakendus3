@@ -1,7 +1,6 @@
 {
-  "name": "Notes",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
+  "name": "ionic2-app-base",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {}
 }
